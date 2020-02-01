@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Experimental.XR;
 
 public class CameraController : MonoBehaviour
 {
@@ -50,7 +52,7 @@ public class CameraController : MonoBehaviour
         }
 
 
-        //Scrollwheel from https://stackoverflow.com/users/4820436/ben-rubin 
+
 
         if ((this.lastScrollWheelDirection > 0 && this.ScrollWheel < 0) ||
             (this.lastScrollWheelDirection < 0 && this.ScrollWheel > 0))
