@@ -17,12 +17,12 @@ public class displayTurn : MonoBehaviour
 
     public void increment()
     {
-        turnNumber++;
+        turnNumber++; // adds turn to counter
     }
 
     // Update is called once per frame
     void Update()
     {
-        turn.text = "Turn: " + turnNumber;
+        turn.text = "Turn: " + turnNumber; // displays turn 
     }
 }

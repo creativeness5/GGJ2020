@@ -11,7 +11,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{02CDE092-3251-B57B-B8DD-D229DCFA1610}</ProjectGuid>
+    <ProjectGuid>{7948CDE9-7EEB-0D85-E1DD-A8E2E4462493}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -65,31 +65,31 @@
     <Compile Include="Assets\Scripts\displayTurn.cs" />
     <Compile Include="Assets\Scripts\droneBehavior.cs" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/jordunaw/Documents/GGJDunaco/GGJ/GGJDunaco/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/jordunaw/Documents/GGJDunaco/GGJ/GGJ2020/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/jordunaw/Documents/GGJDunaco/GGJ/GGJDunaco/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/jordunaw/Documents/GGJDunaco/GGJ/GGJ2020/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/jordunaw/Documents/GGJDunaco/GGJ/GGJDunaco/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/jordunaw/Documents/GGJDunaco/GGJ/GGJ2020/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/jordunaw/Documents/GGJDunaco/GGJ/GGJDunaco/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/jordunaw/Documents/GGJDunaco/GGJ/GGJ2020/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/jordunaw/Documents/GGJDunaco/GGJ/GGJDunaco/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/jordunaw/Documents/GGJDunaco/GGJ/GGJ2020/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/jordunaw/Documents/GGJDunaco/GGJ/GGJDunaco/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/jordunaw/Documents/GGJDunaco/GGJ/GGJ2020/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/jordunaw/Documents/GGJDunaco/GGJ/GGJDunaco/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/jordunaw/Documents/GGJDunaco/GGJ/GGJ2020/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/jordunaw/Documents/GGJDunaco/GGJ/GGJDunaco/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/jordunaw/Documents/GGJDunaco/GGJ/GGJ2020/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/jordunaw/Documents/GGJDunaco/GGJ/GGJDunaco/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/jordunaw/Documents/GGJDunaco/GGJ/GGJ2020/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity 2019.2.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

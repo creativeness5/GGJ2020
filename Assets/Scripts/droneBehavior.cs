@@ -15,15 +15,12 @@ public class droneBehavior : MonoBehaviour
     public float close = 1.0f;
     public float droneNumber = 1; // 1 for Scout, 2 for Scavenge
     private Vector3 targetPosition;
-    public GameObject dome;
-    private Transform dometf;
 
     private float moveCount = 0;
     // Start is called before the first frame update
     void Awake()
     {
         tf = GetComponent<Transform>(); // getting Transform component
-        dometf = dome.GetComponent<Transform>();
     }
 
     public void resetMove()
@@ -32,8 +29,8 @@ public class droneBehavior : MonoBehaviour
         
     }
 
-    public bool RotateTowards(Vector3 target, float speed) { 
-        Vector3 vectorToTarget;
+    public bool RotateTowards(Vector3 target, float speed) { //Rotation for drones to face waypoint
+        Vector3 vectorToTarget; 
         vectorToTarget = target - tf.position;
         UnityEngine.Quaternion targetRotation = UnityEngine.Quaternion.LookRotation(vectorToTarget);
 
@@ -41,6 +38,7 @@ public class droneBehavior : MonoBehaviour
         {
             return false;
         }
+        // Need to stop constant rotation when at waypoint.
 
         tf.rotation = UnityEngine.Quaternion.RotateTowards(tf.rotation, targetRotation, speed * Time.deltaTime);
         return true;
@@ -48,7 +46,7 @@ public class droneBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (moveCount < 180)
+        if (moveCount < 180) // Limits movement per turn
         {
             if (droneNumber <= 1)
             {
@@ -61,7 +59,7 @@ public class droneBehavior : MonoBehaviour
             }
             else if (droneNumber > 1)
             {
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetMouseButtonDown(0)) // Base for button press on waypoint to gather resourses.
                 {
                     Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                     RaycastHit hit;
@@ -72,20 +70,20 @@ public class droneBehavior : MonoBehaviour
                     }
                 }
 
-                if (RotateTowards(waypoints[currentWaypoint].position, turnSpeed))
+                if (RotateTowards(waypoints[currentWaypoint].position, turnSpeed))  // Rotate towards waypoint
                 {
                     //nothing
                 }
                 else
                 {
                     tf.position += (tf.forward * moveSpeed);
-                    moveCount++;
+                    moveCount++; // adds to counter for movement
                 }
 
-                if (Vector3.SqrMagnitude(waypoints[currentWaypoint].position - tf.position) < (close * close))
+                if (Vector3.SqrMagnitude(waypoints[currentWaypoint].position - tf.position) < (close * close)) // reaches waypoint  
                 { 
 
-                    waypoints[0].position = Vector3.zero;
+                    waypoints[0].position = Vector3.zero; // returns to base.
                 }
             }
         }
