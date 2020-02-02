@@ -221,6 +221,7 @@ GameObject:
   m_Component:
   - component: {fileID: 49411735}
   - component: {fileID: 49411736}
+  - component: {fileID: 49411737}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -259,6 +260,18 @@ MonoBehaviour:
   zoomSpeed: 0
   zoomTarget: 0
   lastScrollWheelDirection: 0
+--- !u!114 &49411737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 49411734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e238267180c80f94494cdf93253f6caa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &401668805
 GameObject:
   m_ObjectHideFlags: 0
@@ -288,11 +301,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e30eb675726a64e468b21daf04a52bfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rows: 64
-  columns: 64
+  rows: 16
+  columns: 16
   TilePrefabs:
   - {fileID: 6251058798338338729, guid: ef1537fbb07fe7d4ba8bde1c17aa2d5c, type: 3}
   - {fileID: 5312005490353450182, guid: 1cce7758d235b5346acb54378ebd6e24, type: 3}
+  - {fileID: 8705160278078739726, guid: 4aaac184b195e1d4280708ba7da673e3, type: 3}
 --- !u!4 &401668807
 Transform:
   m_ObjectHideFlags: 0
@@ -435,7 +449,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!1001 &594366195
 PrefabInstance:
@@ -578,6 +592,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: resetMove
+      objectReference: {fileID: 0}
+    - target: {fileID: 3388911815022345093, guid: 5315e0dc3ec5d43438cd6e7f125acb9d,
+        type: 3}
+      propertyPath: m_Name
+      value: Craft Animal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5315e0dc3ec5d43438cd6e7f125acb9d, type: 3}
