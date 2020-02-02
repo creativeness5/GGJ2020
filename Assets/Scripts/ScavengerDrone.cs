@@ -83,7 +83,7 @@ public class ScavengerDrone : MonoBehaviour
             if (Vector3.SqrMagnitude(waypoints[1].position - tf.position) < (close * close)
             ) // reaches waypoint  
             {
-                Debug.Log("Back Home I am");
+                
 
                 turnSpeed = 0;
             }
