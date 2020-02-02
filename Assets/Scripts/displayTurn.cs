@@ -6,7 +6,9 @@ using UnityEngine.UI;
 public class displayTurn : MonoBehaviour
 {
 
-    public float turnNumber = 0;
+    public int turnNumber = 0;
+
+    public bool endTurn = false;
 
     private Text turn;
     // Start is called before the first frame update
@@ -24,5 +26,6 @@ public class displayTurn : MonoBehaviour
     void Update()
     {
         turn.text = "Turn: " + turnNumber;
+        endTurn = true;
     }
 }
