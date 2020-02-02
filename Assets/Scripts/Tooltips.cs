@@ -11,7 +11,7 @@ public class Tooltips : MonoBehaviour
     // Sets the position of the textbox to just above the mouse position
     void Update()
     {
-        transform.position = Input.mousePosition + new Vector3(0, 65, 0);
+        transform.position = Input.mousePosition+ new Vector3(0, 65, 0);
     }
     // Sets the text of the tooltip textbox to a new string
     public void ChangeTooltipText(string newText)
