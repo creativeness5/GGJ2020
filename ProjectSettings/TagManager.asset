@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Fog
   - Material
+  - Tile
   layers:
   - Default
   - TransparentFX

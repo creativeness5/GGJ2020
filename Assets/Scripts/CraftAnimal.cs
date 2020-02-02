@@ -9,7 +9,6 @@ public class CraftAnimal : MonoBehaviour
     RaycastHit hit;
     public GameObject Animal;
     public bool SpawningAnimal = false;
-    private float anumber = 1.0f;
 
     public void SpawnAnimalCoroutine()
     {
@@ -18,19 +17,32 @@ public class CraftAnimal : MonoBehaviour
 
     public void Update()
     {
+        if (SpawningAnimal == false)
+        {
+            return;
+        }
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, out hit))
+        {
+            if (hit.collider.gameObject.tag == "Fog")
+            {
+                Debug.Log("Foghit");
+                return;
+            }
+        }
 
         Debug.Log("weee");
 
-        if (Input.GetKey(KeyCode.Mouse1))
+        if (Input.GetMouseButtonDown(1))
         {
             SpawningAnimal = false;
         }
 
         if (Physics.Raycast(ray, out hit))
         {
-            if (Input.GetKey(KeyCode.Mouse0))
+            if (Input.GetMouseButtonDown(0))
             {
+                Debug.Log(hit.collider.gameObject.tag);
                 GameObject obj = Instantiate(Animal, new Vector3(hit.point.x, 0, hit.point.z), Quaternion.identity) as GameObject;
                 gameManager.GetComponent<Inventory>().Materials -= 2;
                 SpawningAnimal = false;

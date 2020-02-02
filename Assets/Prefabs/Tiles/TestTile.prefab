@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!65 &7492201371955130252
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3631142135838547261}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0254, y: 0.025400005, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8705160278078739726
 GameObject:
   m_ObjectHideFlags: 0
@@ -15,7 +28,7 @@ GameObject:
   - component: {fileID: -6616079477355272455}
   m_Layer: 0
   m_Name: TestTile
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,6 +123,7 @@ MonoBehaviour:
   MaterialsSpawned: 0
   Material: {fileID: 8063640581077010030, guid: ecb544cf8e9979f4bb94d83571ebcbd2,
     type: 3}
+  CanSpawnItem: 0
 --- !u!1001 &4703312302757332020
 PrefabInstance:
   m_ObjectHideFlags: 0
