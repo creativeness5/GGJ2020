@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 494}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -95,7 +95,7 @@ MonoBehaviour:
   m_MinSize: {x: 917, y: 444}
   m_MaxSize: {x: 22012, y: 10022}
   vertical: 0
-  controlID: 93
+  controlID: 134
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 444}
   m_MaxSize: {x: 4002, y: 8044}
   vertical: 1
-  controlID: 31
+  controlID: 54
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -213,8 +213,8 @@ MonoBehaviour:
     y: 0
     width: 572
     height: 1308
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 72}
+  m_MaxSize: {x: 4002, y: 4022}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -301,8 +301,8 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 7a2a0000
-      m_LastClickedID: 0
+      m_SelectedIDs: ae2f0000
+      m_LastClickedID: 12206
       m_ExpandedIDs: 78fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -402,20 +402,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Editor
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\jordunaw\Documents\GGJDunaco\GGJ\GGJ2020
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: b82e0000
-    m_LastClickedID: 11960
-    m_ExpandedIDs: 00000000902c000000ca9a3b
+    m_SelectedIDs: 922c0000
+    m_LastClickedID: 11410
+    m_ExpandedIDs: 00000000922c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -443,7 +443,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000902c0000
+    m_ExpandedIDs: 00000000922c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -616,9 +616,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -9.468011, y: 369.2469, z: -22.042854}
+    m_Target: {x: 26.148125, y: -57.637115, z: -14.040283}
     speed: 2
-    m_Value: {x: -9.468011, y: 369.2469, z: -22.042854}
+    m_Value: {x: 26.148125, y: -57.637115, z: -14.040283}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -647,20 +647,20 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.6936824, y: -0.029500306, z: 0.028457034, w: 0.7191155}
+    m_Target: {x: 0.6104448, y: -0.024938267, z: 0.019236216, w: 0.7914396}
     speed: 2
-    m_Value: {x: 0.69368154, y: -0.02950027, z: 0.028457, w: 0.71911466}
+    m_Value: {x: 0.61044127, y: -0.024938123, z: 0.019236106, w: 0.79143506}
   m_Size:
-    m_Target: 57.42787
+    m_Target: 257.42932
     speed: 2
-    m_Value: 57.42787
+    m_Value: 257.42932
   m_Ortho:
-    m_Target: 0
+    m_Target: 1
     speed: 2
-    m_Value: 0
+    m_Value: 1
   m_CameraSettings:
-    m_Speed: 1
-    m_SpeedNormalized: 0.5
+    m_Speed: 1.4
+    m_SpeedNormalized: 0.6799998
     m_SpeedMin: 0.01
     m_SpeedMax: 2
     m_EasingEnabled: 1
