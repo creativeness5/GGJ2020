@@ -43,8 +43,8 @@ public class CraftAnimal : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 Debug.Log(hit.collider.gameObject.tag);
-                GameObject obj = Instantiate(Animal, new Vector3(hit.point.x, 0, hit.point.z), Quaternion.identity) as GameObject;
-                gameManager.GetComponent<Inventory>().Materials -= 2;
+                GameObject obj = Instantiate(Animal, new Vector3(hit.point.x, 1.1f, hit.point.z), Quaternion.identity) as GameObject;
+                gameManager.GetComponent<Inventory>().Materials -= 3;
                 SpawningAnimal = false;
             }
         }

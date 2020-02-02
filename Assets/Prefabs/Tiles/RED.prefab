@@ -108,7 +108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fog: {fileID: 7124860853681421312}
   MaterialsSpawned: 0
-  Material: {fileID: 8063640581077010030, guid: ecb544cf8e9979f4bb94d83571ebcbd2,
+  Material: {fileID: 2257254507435048373, guid: 2f7561b576fd43746b0a0c49f2d7089f,
     type: 3}
   CanSpawnItem: 0
 --- !u!65 &4943886349063454159

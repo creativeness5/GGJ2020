@@ -8,15 +8,14 @@ using Vector3 = UnityEngine.Vector3;
 public class droneBehavior : MonoBehaviour
 {
     private Transform tf;
-    public Transform[] waypoints; // we have only 1 waypoint that is the gather button
-    public float turnSpeed = 0.5f;
-    public float moveSpeed = 0.5f;
-    private int currentWaypoint = 0;
-    public float close = 1.0f;
-    public float droneNumber = 1; // 1 for Scout, 2 for Scavenge
-    private Vector3 targetPosition;
-
-    private float moveCount = 0;
+    public float turnSpeed = 0f;
+    public float moveSpeed = 0f;
+    public float initalMove = 0.05f;
+    int turnToMove = -1;
+    public int turnCount = 5;
+    private float moveCount = 0f;
+    private int rotateBack = 0;
+    private float rotateCount = 0f;
     // Start is called before the first frame update
     void Awake()
     {
@@ -25,67 +24,65 @@ public class droneBehavior : MonoBehaviour
 
     public void resetMove()
     {
-        moveCount = 0; // resets counter on button press
-        
-    }
+        moveCount = 0;
+        rotateBack = 0; // resets counter on button press
 
-    public bool RotateTowards(Vector3 target, float speed) { //Rotation for drones to face waypoint
-        Vector3 vectorToTarget; 
-        vectorToTarget = target - tf.position;
-        UnityEngine.Quaternion targetRotation = UnityEngine.Quaternion.LookRotation(vectorToTarget);
-
-        if (targetRotation == tf.rotation)
+        if (turnToMove < 4)
         {
-            return false;
+            turnToMove++;
         }
-        // Need to stop constant rotation when at waypoint.
-
-        tf.rotation = UnityEngine.Quaternion.RotateTowards(tf.rotation, targetRotation, speed * Time.deltaTime);
-        return true;
+        else
+        {
+            Debug.Log("resetScouts");
+            turnToMove = 0;
+            rotateCount = 0;
+            rotateBack = 0;
+        }
     }
+
     // Update is called once per frame
     void Update()
     {
         if (moveCount < 180) // Limits movement per turn
         {
-            if (droneNumber <= 1)
+            if (turnToMove < 0)
             {
-                //if scout drone
-                tf.position += (tf.forward * moveSpeed); // Moves Drone Forward
-                    tf.Rotate(0, turnSpeed, 0); // Creates circle motion
-                    moveCount++; // adds counter to reach limit
-
-                    ;
+                moveSpeed = 0;
+                turnSpeed = 0;
             }
-            else if (droneNumber > 1)
+            if (turnToMove == 0)
             {
-                if (Input.GetMouseButtonDown(0)) // Base for button press on waypoint to gather resourses.
+                if (rotateCount < 180)
                 {
-                    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                    RaycastHit hit;
-
-                    if (Physics.Raycast(ray, out hit)) {
-                            targetPosition = hit.point;
-                            waypoints[0].position = targetPosition;
-                    }
-                }
-
-                if (RotateTowards(waypoints[currentWaypoint].position, turnSpeed))  // Rotate towards waypoint
-                {
-                    //nothing
+                    tf.Rotate(0, 0.5f, 0);
+                    rotateCount++;
                 }
                 else
                 {
-                    tf.position += (tf.forward * moveSpeed);
-                    moveCount++; // adds to counter for movement
-                }
-
-                if (Vector3.SqrMagnitude(waypoints[currentWaypoint].position - tf.position) < (close * close)) // reaches waypoint  
-                { 
-
-                    waypoints[0].position = Vector3.zero; // returns to base.
+                    tf.position += (tf.forward * initalMove);
+                    moveCount++;
                 }
             }
+            else
+            {
+
+
+                tf.position += (tf.forward * moveSpeed); // Moves Drone Forward
+                tf.Rotate(0, turnSpeed, 0); // Creates circle motion
+                moveCount++; // adds counter to reach limit
+            }
+        }
+        else if (rotateBack < 180 && turnToMove == 0)
+        {
+            tf.Rotate(0, -0.5f, 0);
+            rotateBack++;
+
+        }
+        else if (rotateBack == 180)
+        {
+            turnSpeed = -0.5f;
+            moveSpeed += 0.1f;
+            rotateBack++;
         }
     }
 }

@@ -69,13 +69,18 @@
     <Compile Include="Assets\Scripts\Dictionary.cs" />
     <Compile Include="Assets\Scripts\displayTurn.cs" />
     <Compile Include="Assets\Scripts\droneBehavior.cs" />
+    <Compile Include="Assets\Scripts\DroneDestroyMaterials.cs" />
     <Compile Include="Assets\Scripts\DroneFogDeleter.cs" />
     <Compile Include="Assets\Scripts\DroneHealth.cs" />
+    <Compile Include="Assets\Scripts\ExitOnClick.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Inventory.cs" />
+    <Compile Include="Assets\Scripts\LoadOnClick.cs" />
     <Compile Include="Assets\Scripts\MapGenerator.cs" />
     <Compile Include="Assets\Scripts\PickItem.cs" />
     <Compile Include="Assets\Scripts\Scavenger.cs" />
+    <Compile Include="Assets\Scripts\ScavengerDrone.cs" />
+    <Compile Include="Assets\Scripts\Tree.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/killane/Documents/GGJ2020/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
