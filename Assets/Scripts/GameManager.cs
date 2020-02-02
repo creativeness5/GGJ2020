@@ -6,10 +6,12 @@ public class GameManager : MonoBehaviour
 {
     Dictionary dictionary = null;
 
-    public int OrganicMaterials = 0;
+    public int Materials = 0;
 
     public int Trees = 0;
     public int Animals = 0;
+
+    public bool Crafting = false;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +20,15 @@ public class GameManager : MonoBehaviour
         dictionary = this.GetComponent<Dictionary>();
 
         //dictionary.recipes.Add("aaaaaaa", );
+    }
+
+    public IEnumerator SpawnItem(GameObject itemToSpawn)
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            //Instantiate()
+            yield break;
+        }
     }
 
 }
