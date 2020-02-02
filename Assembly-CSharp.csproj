@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\displayTurn.cs" />
     <Compile Include="Assets\Scripts\droneBehavior.cs" />
+    <Compile Include="Assets\Scripts\ScavengerDrone.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/jordunaw/Documents/GGJDunaco/GGJ/GGJ2020/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
